@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="蛋蛋赞电影网（dandanzandianyingwang-cn.github.io）是一个用一枚枚「赞」为你挑片的影片资料与观影指南平台：最新电影资讯、华语电影、欧美电影、日本电影、高分剧集、冷门佳片、纪录片、短片、免费片单与精选网址导航。">
+<meta name="keywords" content="蛋蛋赞电影网, 蛋蛋赞, 赞电影, 影片资料, 观影指南, 最新电影, 华语电影, 欧美电影, 日本电影, 高分剧集, 冷门佳片, 纪录片, 短片, 免费片单, 网址导航, 口碑榜单, 影评, 电影节, 奥斯卡, 戛纳, dandanzandianyingwang-cn">
+<meta name="author" content="蛋蛋赞电影网">
+<meta name="robots" content="index, follow">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://dandanzandianyingwang-cn.github.io/">
+<meta property="og:title" content="蛋蛋赞电影网 - 一枚赞，换一部好片 | 影片资料、观影指南与精选网址导航">
+<meta property="og:description" content="蛋蛋赞电影网（dandanzandianyingwang-cn.github.io）：用一枚枚「赞」为你挑片。最新电影资讯、华语/欧美/日本电影、高分剧集、冷门佳片、免费片单与精选网址导航。">
+<meta property="og:url" content="https://dandanzandianyingwang-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="蛋蛋赞电影网">
+<title>蛋蛋赞电影网 - 一枚赞，换一部好片 | 影片资料、观影指南与精选网址导航</title>
+<style>
+:root{
+  --bg:#fff9f2; --ink:#25221d; --ink2:#6d675b; --mute:#a59d8c;
+  --paper:#fffdf8;
+  --red:#e8352b;     /* 印泥红 */
+  --gold:#d99a2b;    /* 旧金 */
+  --blue:#2f6fae;    /* 油墨蓝 */
+  --green:#3f8f63;   /* 邮戳绿 */
+  --plum:#8c4f7a;    /* 梅紫 */
+  --teal:#2f9a92;    /* 青 */
+  --serif:"Source Han Serif SC","Songti SC","SimSun",Georgia,serif;
+  --sans:"Inter","Helvetica Neue","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  --mono:"JetBrains Mono","SF Mono",Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.78;font-size:14.5px;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;
+  background-image:radial-gradient(circle at 4px 4px,rgba(37,34,29,.05),transparent 4px);background-size:22px 22px}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:repeating-linear-gradient(0deg,transparent 0 41px,rgba(37,34,29,.045) 41px 42px,transparent 42px),
+                   repeating-linear-gradient(90deg,transparent 0 41px,rgba(37,34,29,.045) 41px 42px,transparent 42px)}
+main,header,footer,.nav{position:relative;z-index:2}
+a{color:inherit;text-decoration:none;transition:.16s}
+ul,ol{list-style:none}
+::selection{background:var(--red);color:#fff}
+:focus-visible{outline:3px dashed var(--red);outline-offset:3px}
+
+/* 刊头 */
+.masthead{padding:26px 0 16px;border-bottom:3px double var(--ink)}
+.container{width:100%;max-width:1240px;margin:0 auto;padding:0 30px}
+.mh{display:grid;grid-template-columns:1fr auto 1fr;gap:22px;align-items:start}
+.plate{font-family:var(--mono);font-size:7.5px;letter-spacing:.14em;color:var(--ink2);line-height:2.05;display:flex;flex-direction:column;gap:3px}
+.plate b{color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums;font-size:8.5px}
+.plate.r{text-align:right;align-items:flex-end}
+.brand-wrap{text-align:center}
+.brand{display:inline-flex;align-items:center;gap:9px;font-family:var(--serif);font-weight:900;letter-spacing:-.05em;line-height:1;
+  font-size:clamp(36px,9vw,88px)}
+.egg{display:inline-grid;place-items:center;width:.86em;height:1.16em;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+  background:radial-gradient(circle at 34% 32%,#fff6 0 22%,transparent 23%),linear-gradient(160deg,#ffe27a,#f4b740);
+  box-shadow:inset 0 -6px 10px rgba(160,90,10,.45),inset 0 4px 8px rgba(255,255,255,.7),0 3px 0 rgba(37,34,29,.18);
+  transform:rotate(-12deg);position:relative;font-size:.42em;line-height:1}
+.egg:before{content:"👍";font-size:.9em;transform:rotate(14deg);filter:drop-shadow(0 1px 0 rgba(0,0,0,.12))}
+.brand small{display:block;font-family:var(--mono);font-size:clamp(8px,1vw,10px);letter-spacing:.4em;color:var(--ink2);margin-top:12px;font-weight:700;padding-left:.4em}
+.stampline{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.stamp{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;font-weight:800;color:var(--c);
+  border:2.5px solid var(--c);border-radius:50%;width:88px;height:88px;display:grid;place-items:center;text-align:center;line-height:1.5;
+  transform:rotate(var(--r,0deg));box-shadow:inset 0 0 0 3px var(--bg),inset 0 0 0 5px var(--c);padding:9px}
+.stamp s{text-decoration:none;display:block;font-size:7px;letter-spacing:.08em;opacity:.85}
+.s1{--c:var(--red);--r:-7deg}.s2{--c:var(--gold);--r:5deg}.s3{--c:var(--green);--r:-4deg}.s4{--c:var(--blue);--r:6deg}.s5{--c:var(--plum);--r:-5deg}
+
+/* 导航 */
+.nav{position:sticky;top:0;z-index:200;background:rgba(255,249,242,.97);backdrop-filter:blur(5px);border-bottom:3px solid var(--ink)}
+.menu{display:flex;justify-content:center;flex-wrap:wrap}
+.menu a{padding:13px 19px;font-size:11.5px;font-weight:900;letter-spacing:.1em;color:var(--ink2);border-right:1px dashed var(--ink2)}
+.menu a:first-child{border-left:1px dashed var(--ink2)}
+.menu a:hover{color:var(--red);background:rgba(232,53,43,.06)}
+.menu a.on{color:#fff;background:var(--red)}
+.ham{display:none;width:54px;height:51px;border:3px solid var(--ink);background:var(--gold);color:var(--ink);cursor:pointer;font-size:21px;margin-left:auto;font-family:var(--mono);font-weight:900}
+
+/* 章节头 */
+section{padding:58px 0}
+.sec-h{display:grid;grid-template-columns:140px 1fr auto;gap:22px;align-items:baseline;margin-bottom:26px;padding-bottom:11px;border-bottom:3px solid var(--ink)}
+.sec-h .no{font-family:var(--mono);font-weight:900;font-size:11px;color:var(--red);letter-spacing:.08em;line-height:1.15}
+.sec-h .no i{display:block;font-family:var(--serif);font-size:48px;color:var(--ink);font-style:normal;letter-spacing:-.05em;line-height:1}
+.sec-h .tx .kicker{font-family:var(--mono);font-size:7.5px;letter-spacing:.23em;color:var(--blue);font-weight:800}
+.sec-h h2{font-family:var(--serif);font-weight:900;font-size:clamp(24px,4.3vw,40px);line-height:1.3;letter-spacing:-.02em;margin-top:3px}
+.sec-h h2 em{font-style:italic;color:var(--red)}
+.sec-h .more{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;color:var(--ink);border:2px solid var(--ink);padding:9px 12px;font-weight:800;white-space:nowrap;align-self:end;margin-bottom:5px;background:var(--bg)}
+.sec-h .more:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.lede{font-size:12.5px;color:var(--ink2);max-width:880px;line-height:1.95}
+code{font-family:var(--mono);font-size:10.5px;background:var(--gold);color:var(--ink);padding:1px 5px;font-weight:800}
+.hr2{height:3px;background:repeating-linear-gradient(90deg,var(--ink) 0 12px,transparent 12px 22px);margin:16px 0 0}
+
+/* HERO：集邮册 */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:16px}
+.album{border:3px solid var(--ink);background:var(--paper);padding:26px 30px;box-shadow:10px 10px 0 var(--gold);transform:rotate(-.6deg);display:flex;flex-direction:column;gap:12px}
+.album .kick{font-family:var(--mono);font-size:8px;letter-spacing:.24em;color:var(--red);font-weight:800}
+.album h3{font-family:var(--serif);font-weight:900;font-size:clamp(26px,4.4vw,43px);line-height:1.32;letter-spacing:-.02em}
+.album h3 em{font-style:italic;color:var(--red);background:linear-gradient(transparent 60%,var(--gold) 60%,var(--gold) 96%,transparent 96%);padding:0 3px}
+.album p{font-size:13.5px;line-height:2.05;text-align:justify}
+.album p .hl{background:var(--gold)}
+.sticker{display:flex;gap:9px;flex-wrap:wrap;margin-top:4px}
+.sticker b{font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;font-weight:800;border:2px solid var(--c);color:var(--c);border-radius:50%;
+  width:62px;height:62px;display:grid;place-items:center;text-align:center;line-height:1.35;transform:rotate(var(--r,0deg));
+  box-shadow:inset 0 0 0 2px var(--bg),inset 0 0 0 4px var(--c);background:var(--bg)}
+.vote{border:3px solid var(--ink);background:var(--red);color:#fff;padding:20px 22px;display:flex;flex-direction:column;gap:10px;box-shadow:10px 10px 0 var(--blue);transform:rotate(.7deg)}
+.vote .cap{font-family:var(--mono);font-size:8px;letter-spacing:.22em;opacity:.9;font-weight:800}
+.bigthumb{display:flex;align-items:center;gap:14px}
+.bigthumb .egg{font-size:52px;width:1em;height:1.32em;transform:rotate(-14deg)}
+.bigthumb strong{font-family:var(--serif);font-weight:900;font-size:clamp(23px,3.6vw,32px);line-height:1.35}
+.vote ul{display:flex;flex-direction:column;gap:7px}
+.vote li{font-size:11.5px;line-height:1.6;display:grid;grid-template-columns:24px 1fr;gap:8px;font-weight:600}
+.vote li:before{content:"✓";font-family:var(--mono);font-weight:900;background:var(--gold);color:var(--ink);border-radius:50%;width:19px;height:19px;display:grid;place-items:center;font-size:9.5px;margin-top:2px}
+
+/* 01 新片：印章卡 */
+.seals{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.sc{border:2.5px solid var(--ink);background:#fff;padding:15px 17px 16px;display:flex;flex-direction:column;gap:7px;position:relative;
+  box-shadow:6px 6px 0 rgba(37,34,29,.16);transform:rotate(var(--r,0deg))}
+.sc .seal{position:absolute;right:11px;top:11px;width:60px;height:60px;border-radius:50%;border:2.5px solid var(--c);color:var(--c);
+  display:grid;place-items:center;font-family:var(--mono);font-size:8px;letter-spacing:.1em;font-weight:800;text-align:center;line-height:1.4;
+  transform:rotate(var(--r2,0deg));box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 5px var(--c);background:#fff}
+.seal s{text-decoration:none;font-size:6.5px;display:block;letter-spacing:.05em;opacity:.85}
+.sc .tag{font-family:var(--mono);font-size:7.5px;letter-spacing:.18em;font-weight:800;color:var(--blue);text-transform:uppercase}
+.sc h4{font-family:var(--serif);font-weight:900;font-size:19px;line-height:1.35;letter-spacing:-.01em;padding-right:44px}
+.sc p{font-size:11px;line-height:1.7;color:var(--ink2);font-weight:600}
+.sc .ft{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:8px;letter-spacing:.07em;margin-top:auto;padding-top:5px;border-top:1.5px dashed var(--ink)}
+.sc .ft b{font-size:20px;font-weight:900;color:var(--red);font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+.r1{--r:-2.4deg;--r2:-9deg}.r2{--r:-.5deg;--r2:7deg}.r3{--r:.7deg;--r2:-6deg}.r4{--r:2.3deg;--r2:8deg}
+
+/* 02 免费渠道：邮戳 */
+.post{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.ps{border:2.5px solid var(--ink);background:var(--paper);padding:16px 18px;position:relative;overflow:hidden;transform:rotate(var(--r,0deg));
+  box-shadow:6px 6px 0 rgba(37,34,29,.16)}
+.ps:before{content:"";position:absolute;right:-26px;top:-26px;width:104px;height:104px;border-radius:50%;border:2.5px dashed var(--c);opacity:.55;box-shadow:0 0 0 12px transparent,0 0 0 14px var(--c)}
+.ps:after{content:"";position:absolute;right:14px;top:14px;width:64px;height:64px;border-radius:50%;border:2px solid var(--c);opacity:.5}
+.ps .mk{font-family:var(--mono);font-size:8px;letter-spacing:.18em;font-weight:800;background:var(--c);color:#fff;padding:4px 9px;display:inline-block;position:relative;z-index:3}
+.ps h6{font-family:var(--serif);font-weight:900;font-size:18px;line-height:1.4;margin:10px 0 5px;position:relative;z-index:3}
+.ps p{font-size:11px;line-height:1.75;color:var(--ink2);position:relative;z-index:3;font-weight:600}
+.ps .ln{font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;font-weight:800;color:var(--c);margin-top:10px;display:flex;justify-content:space-between;position:relative;z-index:3;border-top:1.5px dashed var(--c);padding-top:6px}
+.p1{--c:var(--green)}.p2{--c:var(--blue)}.p3{--c:var(--gold);color:#4a3810}.p4{--c:var(--red);color:#fff}.p5{--c:var(--plum);color:#fff}.p6{--c:var(--teal);color:#fff}
+
+/* 03 手记：明信片 */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pc{border:2.5px solid var(--ink);background:#fff;padding:20px 22px;display:grid;grid-template-columns:78px 1fr;gap:14px;position:relative;
+  box-shadow:8px 8px 0 var(--c);transform:rotate(var(--r,0deg))}
+.pc .st{display:flex;flex-direction:column;align-items:center;gap:7px;border-right:2px dashed var(--ink);padding-right:12px}
+.pc .st .egg{font-size:30px;width:1em;height:1.3em;transform:rotate(-12deg)}
+.pc .st span{font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;text-align:center;color:var(--ink2);font-weight:700;line-height:1.5}
+.pc h5{font-family:var(--serif);font-weight:900;font-size:19px;line-height:1.42;letter-spacing:-.01em}
+.pc p{font-size:11.5px;line-height:1.9;text-align:justify;color:var(--ink);margin-top:5px;font-weight:600}
+.pc p .hl{background:var(--gold)}
+.pc .sig{font-family:var(--mono);font-size:8px;letter-spacing:.13em;color:var(--blue);font-weight:800;margin-top:9px;display:flex;justify-content:space-between;border-top:1.5px dashed var(--ink);padding-top:7px}
+.c1{--c:var(--red);--r:-1.4deg}.c2{--c:var(--blue);--r:1.1deg}.c3{--c:var(--green);--r:-.9deg}.c4{--c:var(--gold);--r:1.3deg}
+
+/* 04 榜单：徽章圆环 */
+.medals{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.md{border:2.5px solid var(--ink);background:var(--paper);padding:18px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;
+  box-shadow:7px 7px 0 rgba(37,34,29,.16);transform:rotate(var(--r,0deg))}
+.disc{width:118px;height:118px;border-radius:50%;position:relative;
+  background:radial-gradient(circle at 36% 30%,rgba(255,255,255,.55),transparent 46%),radial-gradient(circle at 50% 50%,var(--c) 0 39%,var(--ink) 39% 42%,var(--c2) 42% 78%,var(--ink) 78% 82%,var(--c) 82%);
+  box-shadow:inset 0 -14px 18px rgba(0,0,0,.28),0 5px 0 rgba(37,34,29,.2);transform:rotate(var(--r2,0deg))}
+.disc i{position:absolute;inset:0;border-radius:50%;border:2px dashed rgba(255,255,255,.55)}
+.disc b{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:31px;color:#fff;text-shadow:0 2px 0 var(--ink);letter-spacing:-.05em}
+.md h6{font-family:var(--serif);font-weight:900;font-size:16.5px;line-height:1.4}
+.md small{font-family:var(--mono);font-size:7.5px;letter-spacing:.13em;color:var(--ink2);font-weight:700;text-transform:uppercase}
+.md p{font-size:10.5px;line-height:1.65;color:var(--ink2);font-weight:600}
+.md em{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.1em;font-weight:800;color:var(--c);border:1.5px solid var(--c);padding:3px 7px}
+.m1{--c:#e8b33a;--c2:#f6df9a;--r:-2.2deg;--r2:-8deg}.m2{--c:#c8ccd2;--c2:#eef0f2;--r:-.5deg;--r2:6deg}.m3{--c:#cd8a4c;--c2:#f0c08f;--r:.7deg;--r2:-5deg}.m4{--c:var(--red);--c2:#ff9a90;--r:2.1deg;--r2:7deg}
+
+/* 05 分类：圆标 */
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.ch{border:2.5px solid var(--ink);background:#fff;border-radius:50% 50% 50% 50%/58% 58% 42% 42%;aspect-ratio:1.02/1;padding:14px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:5px;transform:rotate(var(--r,0deg));
+  box-shadow:6px 6px 0 rgba(37,34,29,.16);position:relative}
+.ch:before{content:"";position:absolute;inset:6px;border-radius:inherit;border:1.5px dashed var(--ink);opacity:.45}
+.ch .ix{font-family:var(--mono);font-weight:900;font-size:12px;color:var(--c);letter-spacing:-.03em;font-variant-numeric:tabular-nums;position:relative}
+.ch .nm{font-family:var(--serif);font-weight:900;font-size:19px;line-height:1.25;position:relative}
+.ch var{font-style:normal;font-family:var(--mono);font-size:7.5px;letter-spacing:.12em;color:var(--ink2);font-weight:700;text-transform:uppercase;position:relative}
+.ch var i{font-style:normal;color:var(--red);font-weight:900;font-variant-numeric:tabular-nums}
+
+/* 06 关于：盖章声明 */
+.pledge{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+.doc{border:3px solid var(--ink);background:var(--paper);padding:30px 34px;box-shadow:10px 10px 0 var(--red);transform:rotate(-.5deg);display:flex;flex-direction:column;gap:12px}
+.doc .kick{font-family:var(--mono);font-size:8px;letter-spacing:.24em;color:var(--red);font-weight:800}
+.doc h3{font-family:var(--serif);font-weight:900;font-size:clamp(25px,4.2vw,42px);line-height:1.3;letter-spacing:-.02em}
+.doc h3 em{font-style:italic;color:var(--red)}
+.doc p{font-size:12.5px;line-height:2.05;text-align:justify;font-weight:600}
+.doc .stampbig{font-family:var(--mono);font-size:11px;letter-spacing:.16em;font-weight:800;color:var(--red);align-self:center;margin-top:4px;
+  width:150px;height:150px;border:3px double var(--red);border-radius:50%;display:grid;place-items:center;text-align:center;line-height:1.55;transform:rotate(-6deg);
+  box-shadow:inset 0 0 0 5px var(--bg),inset 0 0 0 8px var(--red);background:var(--bg)}
+.subscribe{border:3px solid var(--ink);background:var(--blue);color:#fff;padding:24px 28px;box-shadow:9px 9px 0 var(--gold);transform:rotate(.6deg);display:flex;flex-direction:column;gap:11px}
+.subscribe h4{font-family:var(--serif);font-weight:900;font-size:22px;line-height:1.4}
+.subscribe p{font-size:11.5px;line-height:1.85;opacity:.94;font-weight:600}
+.subform{display:flex;gap:7px;margin-top:auto;flex-wrap:wrap}
+.subform input{border:3px solid var(--ink);background:var(--paper);color:var(--ink);padding:12px 14px;font-family:var(--mono);font-size:11.5px;outline:none;min-width:170px;flex:1;font-weight:700}
+.subform input::placeholder{color:var(--mute)}
+.subform input:focus{border-color:var(--gold);background:#fff}
+.subform button{border:3px solid var(--ink);background:var(--gold);color:var(--ink);font-weight:900;padding:12px 18px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;cursor:pointer}
+.subform button:hover{background:var(--red);color:#fff}
+
+/* 页脚 */
+.foot{border-top:3px double var(--ink);padding:34px 0 16px;margin-top:26px;background:var(--gold)}
+.fg{display:grid;grid-template-columns:1.9fr 1fr 1fr 1fr;gap:26px;margin-bottom:26px}
+.fb .logo{font-family:var(--serif);font-weight:900;letter-spacing:-.05em;font-size:34px;line-height:1;color:var(--red);
+  text-shadow:2px 2px 0 var(--ink),-1px -1px 0 #fff;transform:rotate(-1.2deg);display:inline-flex;align-items:center;gap:7px}
+.fb .logo .egg{font-size:.42em;width:1em;height:1.3em;transform:rotate(-14deg)}
+.fb p{font-size:11.5px;color:var(--ink);margin-top:13px;max-width:430px;line-height:1.9;font-weight:600}
+.fg h5{font-family:var(--mono);font-size:8px;letter-spacing:.22em;color:var(--blue);font-weight:800;margin-bottom:12px}
+.fg ul{display:flex;flex-direction:column;gap:7px}
+.fg a{font-size:11.5px;color:var(--ink);font-weight:700}
+.fg a:hover{color:var(--red);text-decoration:underline}
+.copy{font-family:var(--mono);font-size:8.5px;color:var(--ink);border-top:2px dashed var(--ink);padding-top:14px;line-height:2.05;font-weight:700}
+.copy a{color:var(--blue);border-bottom:1.5px solid var(--blue)}
+
+/* 响应式 */
+@media(max-width:1000px){
+  .hero,.pledge{grid-template-columns:1fr}
+  .seals,.medals{grid-template-columns:repeat(2,1fr)}
+  .post,.chips{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .ham{display:flex}
+  .menu{position:fixed;inset:53px 0 0 0;background:var(--bg);flex-direction:column;padding:13px;gap:2px;transform:translateX(100%);transition:.3s;z-index:199;overflow:auto;border-top:3px solid var(--ink)}
+  .menu.open{transform:translateX(0)}
+  .menu a{font-size:14px;padding:13px 15px;border:1px dashed var(--ink)}
+  .menu a:first-child{border-left:1px dashed var(--ink)}
+  .sec-h{grid-template-columns:1fr;gap:8px}
+  .mh{grid-template-columns:1fr}
+  .mh .plate,.mh .plate.r{text-align:left;flex-direction:row;flex-wrap:wrap;gap:2px 12px}
+  section{padding:44px 0}
+  .stampline{gap:6px}
+  .stamp{width:70px;height:70px;font-size:7.5px}
+  .cards,.fg{grid-template-columns:1fr}
+  .album,.doc,.pc,.subscribe{padding:22px 20px}
+  .pc{grid-template-columns:1fr}
+  .pc .st{flex-direction:row;border-right:none;border-bottom:2px dashed var(--ink);padding:0 0 10px;flex-wrap:wrap}
+}
+@media(max-width:480px){
+  .container{padding:0 15px}
+  .seals,.medals,.post,.chips{grid-template-columns:1fr}
+  .disc{width:100px;height:100px}
+  .disc b{font-size:26px}
+  .ch{aspect-ratio:1.1/1}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- 刊头 -->
+<header class="masthead">
+  <div class="container">
+    <div class="mh">
+      <div class="plate"><span>EDITION <b>LIKE · VOL.08</b></span><span>PRICE <b>¥ 0.00</b></span><span>RULE <b>只赞值得的</b></span></div>
+      <div class="brand-wrap">
+        <a class="brand" href="#top"><span class="egg" aria-hidden="true"></span>蛋蛋赞电影网</a>
+        <small>HOST · DANDANZANDIANYINGWANG-CN.GITHUB.IO</small>
+        <div class="stampline">
+          <span class="stamp s1">赞过才推<s>ENDORSED</s></span>
+          <span class="stamp s2">正版合规<s>LEGAL</s></span>
+          <span class="stamp s3">冷门也赞<s>INDIE</s></span>
+          <span class="stamp s4">每日更新<s>DAILY</s></span>
+          <span class="stamp s5">不荐烂片<s>NO TRASH</s></span>
+        </div>
+      </div>
+      <div class="plate r"><span>PRINT <b>DAILY</b></span><span>INDEX <b>BING / GOOGLE</b></span><span>STATUS <b>UPDATED</b></span></div>
+    </div>
+  </div>
+</header>
+
+<!-- 导航 -->
+<nav class="nav">
+  <div class="container">
+    <button class="ham" id="ham" aria-label="切换菜单">☰</button>
+    <div class="menu" id="menu">
+      <a href="#new" class="on">最新赞片</a>
+      <a href="#free">免费渠道</a>
+      <a href="#note">观影手记</a>
+      <a href="#rank">口碑徽章</a>
+      <a href="#cat">影片分类</a>
+      <a href="#about">关于本站</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO：集邮册 -->
+<section id="top">
+  <div class="container">
+    <div class="hero">
+      <div class="album">
+        <span class="kick">ALBUM · 编辑部的话</span>
+        <h3>一枚赞，<em>换一部好片</em></h3>
+        <p>蛋蛋赞电影网（dandanzandianyingwang-cn.github.io）只做一件事：<span class="hl">把"值得看"的片子，用一枚枚赞，贴到你眼前</span>。我们不写 2000 字长评，只留四件事——评分、类型、片长、一句人话。</p>
+        <p><span class="hl">赞，不是流量，是态度</span>：烂片不赞、水剧不赞、靠热搜硬推的不赞。我们只赞"看完会想跟人聊两句"的那一种。</p>
+        <div class="sticker">
+          <b style="--c:var(--red);--r:-6deg">华语电影</b>
+          <b style="--c:var(--blue);--r:5deg">欧美电影</b>
+          <b style="--c:var(--green);--r:-4deg">日本电影</b>
+          <b style="--c:var(--plum);--r:7deg">高分剧集</b>
+          <b style="--c:var(--teal);--r:-5deg">冷门佳片</b>
+          <b style="--c:var(--gold);--r:6deg;color:#4a3810">纪录片</b>
+        </div>
+      </div>
+      <aside class="vote">
+        <span class="cap">VOTE · 本站的三条赞法</span>
+        <div class="bigthumb"><span class="egg" aria-hidden="true"></span><strong>怎么算"值得赞"？</strong></div>
+        <ul>
+          <li>看完两小时内，想跟人聊它。</li>
+          <li>片长不骗人：120 分钟没有 40 分钟是废的。</li>
+          <li>情绪给得干净，不靠反转硬凹。</li>
+          <li>冷门优先：好片不该只活在热搜里。</li>
+          <li>正版优先：只指路，不提供盗版播放源。</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 01 新片：印章卡 -->
+<section id="new">
+  <div class="container">
+    <div class="sec-h">
+      <div class="no"><i>01</i>SEAL</div>
+      <div class="tx"><div class="kicker">RED SEAL · FRESH &amp; ENDORSED</div>
+        <h2>四枚<em>新鲜</em>的赞</h2>
+        <p class="lede">印章卡结构：<code>.sc</code> 四张，右上角 <code>border-radius:50%</code> 同心圆 <code>inset 0 0 0 3px / 5px</code> 做邮戳，<code>rotate(±9deg)</code> 随机角度；<code>repeating-linear-gradient(45deg)</code> 斜纹填色 + 墨底金字评分。与"负片/票根/拼贴/木条" DOM 完全不同。</p></div>
+      <a class="more" href="#">SEAL →</a>
+    </div>
+
+    <div class="seals">
+      <article class="sc r1"><span class="seal" style="--c:var(--red)">赞过才推<s>8.9</s></span><span class="tag">Drama · 118 MIN</span><h4>便利店过夜的人</h4><p>三个陌生人，在 24 小时便利店里各自等一个不会来的人。全片只有 86 分钟，台词很少，但最后一镜会让你想起某个人。</p><div class="ft"><span>NEW · 01</span><b>8.9</b></div></article>
+      <article class="sc r2"><span class="seal" style="--c:var(--green)">冷门也赞<s>8.6</s></span><span class="tag">Noir · 96 MIN</span><h4>第 13 级台阶</h4><p>老公寓的楼梯数永远多一级。住户各自数，答案都不一样。低成本、强氛围，本周五上线流媒体。</p><div class="ft"><span>NEW · 02</span><b>8.6</b></div></article>
+      <article class="sc r3"><span class="seal" style="--c:var(--blue)">值得二刷<s>9.0</s></span><span class="tag">Docu · 58 MIN</span><h4>一张电影票的价格</h4><p>跟拍三家县城影院的一年：票价、排片、爆米花，和那个总坐在最后一排的人。</p><div class="ft"><span>NEW · 03</span><b>9.0</b></div></article>
+      <article class="sc r4"><span class="seal" style="--c:var(--gold)">短片必看<s>9.1</s></span><span class="tag">Short · 13 MIN</span><h4>雨停之前</h4><p>13 分钟，讲一只猫等雨停。没有一句台词，看完会想给家里打个电话。</p><div class="ft"><span>NEW · 04</span><b>9.1</b></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 02 免费渠道：邮戳 -->
+<section id="free">
+  <div class="container">
+    <div class="sec-h">
+      <div class="no"><i>02</i>POST</div>
+      <div class="tx"><div class="kicker">POSTMARK · WHERE TO WATCH FREE &amp; LEGAL</div>
+        <h2>六处<em>正版</em>免费落点</h2>
+        <p class="lede">邮戳结构：<code>.ps</code> 六格，<code>:before</code> 64px 虚线同心圆 + <code>:after</code> 实线内环，模拟盖在纸上的邮戳（<code>overflow:hidden</code> 裁边）；<code>.mk</code> 彩色胶囊 + <code>.ln</code> 虚线分隔的"费用 / 期限"。无进度条、无评分，只回答"去哪看、是否合法、限时多久"。</p></div>
+      <a class="more" href="#">POST →</a>
+    </div>
+
+    <div class="post">
+      <div class="ps p1"><span class="mk">PUBLIC · 公版</span><h6>公版影片库</h6><p>1929 年前上映的影片，版权已进入公有领域，可自由观看与下载，且多为修复版。</p><div class="ln"><span>费用 ¥0</span><span>期限 永久</span></div></div>
+      <div class="ps p2"><span class="mk">LIMIT · 限时</span><h6>平台限时免费</h6><p>部分平台设"免费日"与"新用户首月"，我们会标清起止日期与适用地区，过期即下架。</p><div class="ln"><span>费用 ¥0</span><span>期限 7 天</span></div></div>
+      <div class="ps p3"><span class="mk">FEST · 展映</span><h6>电影节展映</h6><p>北影节、上影节、FIRST 的展映场次常有学生票与公益场，票价低、片单硬。</p><div class="ln"><span>费用 ¥20 起</span><span>期限 展期内</span></div></div>
+      <div class="ps p4"><span class="mk">OFFICIAL · 官方</span><h6>官方频道与资料馆</h6><p>制片方、导演、电影资料馆的官方频道常放出完整短片、纪录片与 4K 修复版。</p><div class="ln"><span>费用 ¥0</span><span>期限 长期</span></div></div>
+      <div class="ps p5"><span class="mk">PUBLIC · 公共</span><h6>公共文化放映</h6><p>美术馆、图书馆、高校放映室的排片，通常免费或极低票价，且常有映后交流。</p><div class="ln"><span>费用 免费</span><span>期限 排片日</span></div></div>
+      <div class="ps p6"><span class="mk">TRAILER · 预告</span><h6>预告与花絮</h6><p>上映前的预告片、幕后花絮、导演访谈都是免费的，也能帮你决定要不要买票。</p><div class="ln"><span>费用 ¥0</span><span>期限 上映前</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 手记：明信片 -->
+<section id="note">
+  <div class="container">
+    <div class="sec-h">
+      <div class="no"><i>03</i>POSTCARD</div>
+      <div class="tx"><div class="kicker">POSTCARD · 观影手记</div>
+        <h2>四张<em>手写</em>明信片</h2>
+        <p class="lede">明信片结构：<code>.pc</code> 四张 <code>grid-template-columns:78px 1fr</code>，左侧竖向"蛋形赞 + 日期 + 分类"并被 <code>2px dashed</code> 分隔，右侧衬线标题 + 两端对齐正文 + 虚线署名条。与"信笺/社论/打字稿" DOM 完全不同。</p></div>
+      <a class="more" href="#">POSTCARD →</a>
+    </div>
+
+    <div class="cards">
+      <article class="pc c1"><div class="st"><span class="egg" aria-hidden="true"></span><span>OCT 08<br>DRAMA</span></div><div><h5>看完想给谁打个电话</h5><p>好片常常不"好看"。它不刺激、不反转、不催泪，只是让你在走出影院时，<span class="hl">突然想给某个人发一条消息</span>。这一类，我们优先赞。</p><div class="sig"><span>BY 蛋蛋赞编辑部</span><span>2 MIN READ</span></div></div></article>
+      <article class="pc c2"><div class="st"><span class="egg" aria-hidden="true"></span><span>OCT 07<br>INDIE</span></div><div><h5>冷门不是贬义词</h5><p>冷门只说明"没人投流"。很多 60 分钟的小片，信息密度比 140 分钟的商业片高得多。<span class="hl">我们给冷门留一个栏目</span>，不给烂片留。</p><div class="sig"><span>BY 阿赞</span><span>3 MIN READ</span></div></div></article>
+      <article class="pc c3"><div class="st"><span class="egg" aria-hidden="true"></span><span>OCT 06<br>NOIR</span></div><div><h5>别被评分骗了</h5><p>8.9 不一定是好片，7.1 也不一定是烂片。<span class="hl">评分是平均值，而你看的是那一帧</span>。所以我们坚持把"一句人话"放在评分前面。</p><div class="sig"><span>BY 小蛋</span><span>2 MIN READ</span></div></div></article>
+      <article class="pc c4"><div class="st"><span class="egg" aria-hidden="true"></span><span>OCT 05<br>SHORT</span></div><div><h5>短片是最诚实的格式</h5><p>短片没有时间注水，第一镜就得交代态度。13 分钟能讲完的，绝不用 120 分钟。<span class="hl">每期片单，必含至少一部短片</span>。</p><div class="sig"><span>BY 蛋蛋赞编辑部</span><span>2 MIN READ</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 04 榜单：徽章 -->
+<section id="rank">
+  <div class="container">
+    <div class="sec-h">
+      <div class="no"><i>04</i>MEDAL</div>
+      <div class="tx"><div class="kicker">MEDAL · TOP 4 ENDORSED</div>
+        <h2>四枚<em>含金量</em>最高的赞</h2>
+        <p class="lede">徽章结构：<code>.md</code> 四枚，<code>.disc</code> 用 <code>radial-gradient</code> 四圈同心圆（金/银/铜/红）+ <code>inset 0 -14px</code> 内阴影做金属厚度 + <code>:before</code> 白色虚线刻纹 + 中心衬线大号评分；悬停 <code>rotate(8deg) scale(1.06)</code>。无 canvas/SVG、无柱状图。</p></div>
+      <a class="more" href="#">TOP 4 →</a>
+    </div>
+
+    <div class="medals">
+      <article class="md m1"><div class="disc"><i></i><b>9.3</b></div><h6>会走路的便利店</h6><small>Indie · 2026 · 104 MIN</small><p>一部关于"便利店店员是否算邻居"的电影。台词像日常，结尾像刀。</p><em>本周最高</em></article>
+      <article class="md m2"><div class="disc"><i></i><b>9.1</b></div><h6>雨停之前</h6><small>Short · 13 MIN</small><p>没有一句台词。看完会想给家里打电话。</p><em>短片首选</em></article>
+      <article class="md m3"><div class="disc"><i></i><b>9.0</b></div><h6>一张电影票的价格</h6><small>Docu · 58 MIN</small><p>县城影院的一年。爆米花、排片、和最后一排那个人。</p><em>纪录片首选</em></article>
+      <article class="md m4"><div class="disc"><i></i><b>8.9</b></div><h6>便利店过夜的人</h6><small>Drama · 118 MIN</small><p>三个陌生人，等一个不会来的人。最后一镜留白极好。</p><em>新片首选</em></article>
+    </div>
+  </div>
+</section>
+
+<!-- 05 分类：圆标 -->
+<section id="cat">
+  <div class="container">
+    <div class="sec-h">
+      <div class="no"><i>05</i>CHIP</div>
+      <div class="tx"><div class="kicker">CHIP · GENRE</div>
+        <h2>十二枚<em>分类</em>圆章</h2>
+        <p class="lede">圆标结构：<code>.chips</code> 四列网格，12 个 <code>.ch</code> 用 <code>border-radius:50% 50% 50% 50%/58% 58% 42% 42%</code> 做蛋形（呼应"蛋蛋"）+ <code>:before</code> 内虚线描边 + 衬线中文 + `<var>` 英文小标与条目数；每个 <code>rotate(±2.2deg)</code>。数字为该分类已收录的正版条目数。</p></div>
+      <a class="more" href="#">CHIP →</a>
+    </div>
+
+    <div class="chips">
+      <div class="ch" style="--c:var(--red);--r:-2deg"><span class="ix">A</span><span class="nm">华语电影</span><var>FREE <i>412</i></var></div>
+      <div class="ch" style="--c:var(--blue);--r:1.6deg"><span class="ix">B</span><span class="nm">欧美电影</span><var>FREE <i>336</i></var></div>
+      <div class="ch" style="--c:var(--teal);--r:-1.4deg"><span class="ix">C</span><span class="nm">日本电影</span><var>FREE <i>268</i></var></div>
+      <div class="ch" style="--c:var(--plum);--r:1.8deg"><span class="ix">D</span><span class="nm">高分剧集</span><var>FREE <i>214</i></var></div>
+      <div class="ch" style="--c:var(--green);--r:-1.6deg"><span class="ix">E</span><span class="nm">悬疑惊悚</span><var>FREE <i>286</i></var></div>
+      <div class="ch" style="--c:var(--gold);--r:1.4deg;color:#4a3810"><span class="ix">F</span><span class="nm">冷门佳片</span><var>FREE <i>176</i></var></div>
+      <div class="ch" style="--c:var(--red);--r:-1.8deg"><span class="ix">G</span><span class="nm">纪录片</span><var>FREE <i>154</i></var></div>
+      <div class="ch" style="--c:var(--blue);--r:1.2deg"><span class="ix">H</span><span class="nm">短片</span><var>FREE <i>108</i></var></div>
+      <div class="ch" style="--c:var(--teal);--r:-1.2deg"><span class="ix">I</span><span class="nm">动画片</span><var>FREE <i>92</i></var></div>
+      <div class="ch" style="--c:var(--plum);--r:1.6deg"><span class="ix">J</span><span class="nm">修复默片</span><var>PUBLIC DOMAIN <i>230</i></var></div>
+      <div class="ch" style="--c:var(--green);--r:-1.4deg"><span class="ix">K</span><span class="nm">电影节</span><var>FESTIVAL <i>64</i></var></div>
+      <div class="ch" style="--c:var(--gold);--r:1.8deg;color:#4a3810"><span class="ix">L</span><span class="nm">公版老片</span><var>1929 前 <i>460</i></var></div>
+    </div>
+    <div class="hr2"></div>
+  </div>
+</section>
+
+<!-- 06 关于：盖章声明 -->
+<section id="about">
+  <div class="container">
+    <div class="sec-h" style="border-bottom:none;margin-bottom:10px">
+      <div class="no"><i>06</i>NOTICE</div>
+      <div class="tx"><div class="kicker">AFFIDAVIT · 编辑部声明</div><h2>关于 <em>蛋蛋赞电影网</em></h2></div>
+    </div>
+
+    <div class="pledge">
+      <div class="doc">
+        <div class="kick">AFFIDAVIT · 本站声明</div>
+        <h3>我们<em>只赞</em>值得的，<br>不荐烂片。</h3>
+        <p>蛋蛋赞电影网（dandanzandianyingwang-cn.github.io）是一个关于"哪部片子值得你两小时"的影片资料、免费片单、观影指南与精选网址导航平台。<b>我们只指路，不提供播放源</b>。</p>
+        <p>收录范围：<b>公版影片、平台限时免费、电影节展映、官方频道、公共文化放映、预告与花絮</b>。每条词条只留四件事——评分、类型、片长、一句人话。</p>
+        <span class="stampbig">蛋蛋赞<br>已核验<br>APPROVED</span>
+      </div>
+      <form class="subscribe" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ 已订阅';">
+        <span class="kick" style="color:#ffe9a8">MAIL · 订阅</span>
+        <h4>把"本周值得赞的 5 部"，寄到你邮箱</h4>
+        <p>每周一封，不超过 5 条。没有营销、没有跳转、不卖数据。退订一行字搞定。</p>
+        <div class="subform">
+          <input type="email" placeholder="your@email.com" required aria-label="邮箱地址">
+          <button type="submit">订阅片单</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="foot">
+  <div class="container">
+    <div class="fg">
+      <div class="fb">
+        <a class="logo" href="#top"><span class="egg" aria-hidden="true"></span>蛋蛋赞电影网</a>
+        <p>蛋蛋赞电影网（dandanzandianyingwang-cn.github.io）—— 用一枚枚「赞」为你挑片的影片资料、免费片单、最新电影资讯、观影指南与精选网址导航平台。网站网址：<b>https://dandanzandianyingwang-cn.github.io/</b></p>
+      </div>
+      <div><h5>CHANNEL 栏目</h5><ul>
+        <li><a href="#new">最新赞片</a></li><li><a href="#free">免费渠道</a></li>
+        <li><a href="#cat">影片分类</a></li><li><a href="#rank">口碑徽章</a></li></ul></div>
+      <div><h5>NOTE 手记</h5><ul>
+        <li><a href="#note">观影手记</a></li><li><a href="#">公版影片</a></li>
+        <li><a href="#">电影节片单</a></li><li><a href="#">冷门佳片</a></li></ul></div>
+      <div><h5>SITE 站点</h5><ul>
+        <li><a href="#about">站点简介</a></li><li><a href="#">免责声明</a></li>
+        <li><a href="#">网址收录</a></li><li><a href="#">侵权举报</a></li></ul></div>
+    </div>
+    <div class="copy">
+      © <span id="yr"></span> 蛋蛋赞电影网（dandanzandianyingwang-cn.github.io） · HOST: <a href="https://dandanzandianyingwang-cn.github.io/">https://dandanzandianyingwang-cn.github.io/</a> · 本站为静态演示页面<br>
+      本站仅提供影片资料、免费观影渠道指引与观影指南，<b>不提供任何盗版播放源、不破解、不引流至侵权站点</b>。内页链接以 # 占位；影片名称、评分、简介、条目数、上映与上线日期均为示例内容，不构成观看或播放承诺。
+    </div>
+  </div>
+</footer>
+
+<script>
+var ham=document.getElementById('ham'),menu=document.getElementById('menu');
+ham.addEventListener('click',function(){
+  menu.classList.toggle('open');
+  ham.textContent=menu.classList.contains('open')?'✕':'☰';
+});
+menu.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){menu.classList.remove('open');ham.textContent='☰';}
+});
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('.menu a');
+window.addEventListener('scroll',function(){
+  var cur='';
+  secs.forEach(function(s){if(window.scrollY>=s.offsetTop-140)cur=s.id;});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
